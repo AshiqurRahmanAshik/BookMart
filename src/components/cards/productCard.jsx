@@ -46,7 +46,12 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Buy Button */}
-        <button className="btn btn-primary btn-sm w-full mt-3">Buy Now</button>
+        <button className="btn btn-secondary btn-sm w-full mt-3">
+          Buy Now
+        </button>
+        <button className="btn btn-primary btn-sm w-full mt-3">
+          View Details
+        </button>
       </div>
     </div>
   );
