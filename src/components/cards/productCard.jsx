@@ -1,57 +1,54 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+
+import { FaStar } from "react-icons/fa";
+import CartButton from "../buttons/CartButton";
 
 const ProductCard = ({ product }) => {
+  const { title, image, price, ratings, reviews, sold, _id } = product;
+
   return (
-    <div
-      key={product.title}
-      className="bg-base-200 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-    >
-      {/* Product Image */}
-      <Image
-        src={product.image}
-        alt={product.title}
-        width={100}
-        height={300}
-        className="w-full h-64 object-cover"
-      />
+    <div className="card w-72 bg-base-100 shadow-lg p-2">
+      <figure className="p-4">
+        <Image
+          width={200}
+          height={180}
+          src={image}
+          alt={title}
+          className="rounded-md w-full h-48 object-cover"
+        />
+      </figure>
 
-      {/* Product Info */}
-      <div className="p-4 flex flex-col justify-between h-64">
-        <div>
-          <h2 className="text-xl font-semibold mb-2">{product.title}</h2>
-          <p className="text-gray-600 text-sm mb-2 line-clamp-3">
-            {product.description}
-          </p>
+      <div className="card-body p-4">
+        <h2 className="card-title text-lg font-semibold">{title}</h2>
+
+        <div className="flex items-center space-x-2 mt-2">
+          <div className="flex text-yellow-400">
+            {Array.from({ length: 5 }, (_, i) => (
+              <FaStar
+                key={i}
+                className={
+                  i < Math.round(ratings) ? "opacity-100" : "opacity-40"
+                }
+              />
+            ))}
+          </div>
+          <span className="text-sm text-gray-600">({reviews} reviews)</span>
         </div>
 
-        <div className="mt-2 flex items-center justify-between">
-          {/* Price & Discount */}
-          <div>
-            <span className="font-bold text-primary">${product.price}</span>
-            {product.discount && (
-              <span className="text-sm text-success ml-2">
-                -{product.discount}%
-              </span>
-            )}
-          </div>
-
-          {/* Ratings */}
-          <div className="flex items-center">
-            <span className="text-yellow-400 mr-1">
-              {"★".repeat(Math.round(product.ratings))}
-            </span>
-            <span className="text-gray-600 text-sm">{product.ratings}</span>
-          </div>
+        <div className="flex justify-between items-center mt-2">
+          <span className="font-bold text-lg">৳{price}</span>
+          <span className="text-sm text-gray-500">{sold} sold</span>
         </div>
 
-        {/* Buy Button */}
-        <button className="btn btn-secondary btn-sm w-full mt-3">
-          Buy Now
-        </button>
-        <button className="btn btn-primary btn-sm w-full mt-3">
+        <CartButton product={product} />
+
+        <Link
+          href={`/products/${_id}`}
+          className="btn btn-primary btn-outline mt-4 w-full"
+        >
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   );

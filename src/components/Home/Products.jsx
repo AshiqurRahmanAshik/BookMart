@@ -1,25 +1,34 @@
 import React from "react";
-import products from "@/data/products.json";
-import ProductCard from "../cards/productCard";
+import { getProducts } from "@/actions/server/product"; // ✅ named import
+import ProductCard from "../../components/cards/productCard";
 
-const Products = () => {
+const Products = async () => {
+  let products = [];
+
+  try {
+    products = await getProducts();
+    console.log("Products fetched:", products);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+
+  if (!products || products.length === 0) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-red-500 text-xl font-semibold">
+          No products found in the database!
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-base-100 min-h-screen py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <h1 className="text-4xl font-bold text-center mb-10 text-primary">
-          Featured Books
-        </h1>
-
-        {/* Product Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.map((product) => (
-            <div key={product.title}>
-              {" "}
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <h2 className="text-center text-4xl font-bold mb-12">Our Products</h2>
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {products.map((product) => (
+          <ProductCard key={product._id} product={product} />
+        ))}
       </div>
     </div>
   );

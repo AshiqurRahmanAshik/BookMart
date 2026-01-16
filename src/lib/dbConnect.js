@@ -1,20 +1,35 @@
+// src/lib/dbConnect.js
+import { MongoClient } from 'mongodb';
+
 const uri = process.env.MONGODB_URI;
-const dbname = process.env.DBNAME;
-export const collections = {
-  PRODUCTS: "products",
-  USERS: "users",
-  CART: "cart",
+const options = {};
+
+let client;
+let clientPromise;
+
+if (!process.env.MONGODB_URI) {
+  throw new Error('Please add your Mongo URI to .env');
+}
+
+if (process.env.NODE_ENV === 'development') {
+  if (!global._mongoClientPromise) {
+    client = new MongoClient(uri, options);
+    global._mongoClientPromise = client.connect();
+  }
+  clientPromise = global._mongoClientPromise;
+} else {
+  client = new MongoClient(uri, options);
+  clientPromise = client.connect();
+}
+
+// Fix: Make this function properly async
+export const dbConnect = async (collectionName) => {
+  const client = await clientPromise;
+  const db = client.db(process.env.DB_NAME || 'bookMartDB');
+  return db.collection(collectionName);
 };
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-export const dbConnect = (cname) => {
-  return client.db(dbname).collection(cname);
+export const collections = {
+  USERS: 'users',
+  PRODUCTS: 'products',
 };
