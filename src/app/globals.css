@@ -6,23 +6,24 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  /* Brand */
-  --color-primary: oklch(65% 0.23 35);
-  --color-secondary: oklch(58% 0.18 30);
-  --color-accent: oklch(72% 0.2 55);
 
-  /* Base */
-  --color-base-100: oklch(100% 0 0);
-  --color-base-200: oklch(97% 0.01 95);
-  --color-base-300: oklch(92% 0.015 95);
+  /* 🌿 Brand Colors (Green-focused) */
+  --color-primary: oklch(62% 0.16 145); /* Leaf Green */
+  --color-secondary: oklch(55% 0.12 155); /* Muted Forest Green */
+  --color-accent: oklch(70% 0.14 130); /* Fresh Mint */
 
-  /* Neutral */
-  --color-neutral: oklch(35% 0.01 260);
-  --color-neutral-content: oklch(96% 0 0);
+  /* 📖 Base (Soft paper-like background) */
+  --color-base-100: oklch(99% 0.01 120); /* Soft white-green */
+  --color-base-200: oklch(96% 0.015 120); /* Light sage */
+  --color-base-300: oklch(92% 0.02 120); /* Pale green-gray */
 
-  /* Feedback */
-  --color-success: oklch(70% 0.17 145);
-  --color-error: oklch(62% 0.24 28);
+  /* 🖋️ Neutral (Text & UI) */
+  --color-neutral: oklch(30% 0.02 140); /* Deep green-gray text */
+  --color-neutral-content: oklch(98% 0 0); /* White content */
+
+  /* ✅ Feedback */
+  --color-success: oklch(68% 0.18 145); /* Success green */
+  --color-error: oklch(60% 0.22 25); /* Soft red (not harsh) */
 }
 
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));

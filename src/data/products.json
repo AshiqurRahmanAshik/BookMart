@@ -1,0 +1,242 @@
+[
+  {
+    "title": "The Enchanted Forest",
+    "bangla": "The Enchanted Forest",
+    "image": "https://i.ibb.co/7KqF7Vb/enchanted-forest.jpg",
+    "price": 450,
+    "discount": 15,
+    "sizes": [],
+    "color": [],
+    "description": "A magical story that takes readers on a mysterious forest adventure. The characters experience courage, friendship, and new discoveries. Suitable for children and young readers.",
+    "qna": [
+      {
+        "question": "What age group is this book suitable for?",
+        "answer": "Suitable for children aged 8 to 12 years."
+      },
+      {
+        "question": "Is this a fantasy story?",
+        "answer": "Yes, it is a magical fantasy tale."
+      }
+    ],
+    "reviews": 35,
+    "sold": 120,
+    "ratings": 4.8,
+    "info": [
+      "Mystery and fantasy story",
+      "Teaches courage and friendship",
+      "Suitable for children and young readers",
+      "Beautifully illustrated"
+    ]
+  },
+
+  {
+    "title": "Adventures of Tiny Tim",
+    "bangla": "Adventures of Tiny Tim",
+    "image": "https://i.ibb.co/XxD8n1Y/tiny-tim.jpg",
+    "price": 380,
+    "discount": 10,
+    "sizes": [],
+    "color": [],
+    "description": "Follow Tiny Tim on his brave adventures. This story teaches children about friendship, courage, and problem-solving in a fun and engaging way.",
+    "qna": [
+      {
+        "question": "What age is this book suitable for?",
+        "answer": "For children aged 7 to 11 years."
+      },
+      {
+        "question": "Is this educational?",
+        "answer": "Yes, it teaches courage and friendship through storytelling."
+      }
+    ],
+    "reviews": 28,
+    "sold": 85,
+    "ratings": 4.7,
+    "info": [
+      "Teaches bravery and friendship",
+      "Encourages reading interest",
+      "Simple and engaging story",
+      "Age-appropriate content"
+    ]
+  },
+
+  {
+    "title": "Mystery of Old Library",
+    "bangla": "Mystery of Old Library",
+    "image": "https://i.ibb.co/2MZ3KSh/old-library.jpg",
+    "price": 500,
+    "discount": 20,
+    "sizes": [],
+    "color": [],
+    "description": "An exciting story where hidden secrets in an old library are uncovered. The book enhances children's imagination and problem-solving skills.",
+    "qna": [
+      {
+        "question": "Is this book mystery-based?",
+        "answer": "Yes, it is a mystery story."
+      },
+      {
+        "question": "Can children read it alone?",
+        "answer": "Yes, it is written in simple language suitable for independent reading."
+      }
+    ],
+    "reviews": 40,
+    "sold": 110,
+    "ratings": 4.9,
+    "info": [
+      "Mystery and fantasy story",
+      "Enhances imagination",
+      "Written in simple language",
+      "Beautiful illustrations"
+    ]
+  },
+
+  {
+    "title": "Magical Tales",
+    "bangla": "Magical Tales",
+    "image": "https://i.ibb.co/VVhQ5vM/magical-tales.jpg",
+    "price": 600,
+    "discount": 12,
+    "sizes": [],
+    "color": [],
+    "description": "A collection of magical stories for children featuring different characters and adventures. Helps improve creativity and thinking skills.",
+    "qna": [
+      {
+        "question": "How many stories are in this collection?",
+        "answer": "The collection includes 5 short stories."
+      },
+      {
+        "question": "Can children read the stories alone?",
+        "answer": "Yes, the stories are simple and engaging."
+      }
+    ],
+    "reviews": 32,
+    "sold": 95,
+    "ratings": 4.8,
+    "info": [
+      "Collection of magical stories",
+      "Enhances imagination and thinking",
+      "Suitable for children",
+      "Illustrated stories"
+    ]
+  },
+
+  {
+    "title": "Little Readers Beginner Set",
+    "bangla": "Little Readers Beginner Set",
+    "image": "https://i.ibb.co/9H7kN1C/little-readers.jpg",
+    "youtube": "https://www.youtube.com/watch?v=book-demo",
+    "price": 350,
+    "discount": 8,
+    "sizes": [],
+    "color": [],
+    "description": "A starter book set for young readers with simple stories and illustrations to introduce them to reading and build their interest in books.",
+    "qna": [
+      {
+        "question": "What age group is this set for?",
+        "answer": "For children aged 5 to 7 years."
+      },
+      {
+        "question": "Is it effective for learning?",
+        "answer": "Yes, it encourages reading interest and basic vocabulary."
+      }
+    ],
+    "reviews": 25,
+    "sold": 70,
+    "ratings": 4.6,
+    "info": [
+      "Ideal for starting reading",
+      "Simple stories with illustrations",
+      "Encourages reading interest",
+      "Includes 5 small books"
+    ]
+  },
+
+  {
+    "title": "Junior Detective Stories",
+    "bangla": "Junior Detective Stories",
+    "image": "https://i.ibb.co/8m7JcPZ/junior-detective.jpg",
+    "price": 480,
+    "discount": 10,
+    "sizes": [],
+    "color": [],
+    "description": "Mystery stories for young detectives. Children solve puzzles and enhance their analytical and imaginative skills.",
+    "qna": [
+      {
+        "question": "Are these mystery stories?",
+        "answer": "Yes, they are short, exciting mystery tales."
+      },
+      {
+        "question": "Can children read them alone?",
+        "answer": "Yes, written in simple language for easy reading."
+      }
+    ],
+    "reviews": 30,
+    "sold": 90,
+    "ratings": 4.7,
+    "info": [
+      "Short mystery stories",
+      "Enhances imagination and analytical skills",
+      "Suitable for children",
+      "Simple and engaging language"
+    ]
+  },
+
+  {
+    "title": "Creative Story Writing Kit",
+    "bangla": "Creative Story Writing Kit",
+    "image": "https://i.ibb.co/pvY7X6b/story-kit.jpg",
+    "price": 550,
+    "discount": 12,
+    "sizes": [],
+    "color": [],
+    "description": "A story writing kit for kids with tools and instructions to create their own stories, boosting creativity and language skills.",
+    "qna": [
+      {
+        "question": "Does it enhance creativity?",
+        "answer": "Yes, it develops imagination and language skills through story creation."
+      },
+      {
+        "question": "Can children use it alone?",
+        "answer": "Yes, with simple instructions included."
+      }
+    ],
+    "reviews": 27,
+    "sold": 75,
+    "ratings": 4.8,
+    "info": [
+      "Boosts creativity and language skills",
+      "Teaches story writing",
+      "Easy instructions included",
+      "Suitable for children"
+    ]
+  },
+
+  {
+    "title": "Amazing Facts for Young Minds",
+    "bangla": "Amazing Facts for Young Minds",
+    "image": "https://i.ibb.co/5r8QZ3K/amazing-facts.jpg",
+    "price": 420,
+    "discount": 9,
+    "sizes": [],
+    "color": [],
+    "description": "An educational book filled with amazing facts about science, history, and general knowledge, perfect for young curious minds.",
+    "qna": [
+      {
+        "question": "Can children read it alone?",
+        "answer": "Yes, it is written in simple and easy-to-understand language."
+      },
+      {
+        "question": "Is it educational?",
+        "answer": "Yes, teaches science and general knowledge in a fun way."
+      }
+    ],
+    "reviews": 33,
+    "sold": 80,
+    "ratings": 4.7,
+    "info": [
+      "Teaches science and general knowledge",
+      "Suitable for children",
+      "Educational and fun",
+      "Written in simple language"
+    ]
+  }
+]

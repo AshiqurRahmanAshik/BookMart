@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="navbar-end space-x-2">
         <Link href="/cart" className="btn btn-ghost btn-circle">
           {" "}
-          <IoCartOutline size={30} color="red" />
+          <IoCartOutline size={30} color="green" />
         </Link>
         <Link href="/login" className="btn btn-primary">
           Login
