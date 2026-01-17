@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { SocialButtons } from "./SocialButton";
 import { useState } from "react";
-import { postUser } from "@/actions/server/auth";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
 import Swal from "sweetalert2";
@@ -11,6 +10,7 @@ export const RegisterForm = () => {
   const params = useSearchParams();
   const router = useRouter();
   const callbackUrl = params.get("callbackUrl") || "/";
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,21 +23,33 @@ export const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await postUser(form);
 
-    if (result.acknowledged) {
+    // ✅ Call the API route instead of server function
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      // ✅ Auto login after register
       const result = await signIn("credentials", {
         email: form.email,
         password: form.password,
         redirect: false,
-        callbackUrl: callbackUrl,
+        callbackUrl,
       });
+
       if (result.ok) {
-        Swal.fire("success", "Registered successfully", "success");
+        Swal.fire("Success", "Registered successfully", "success");
         router.push(callbackUrl);
+      } else {
+        Swal.fire("Error", "Could not login automatically", "error");
       }
     } else {
-      Swal.fire("error", "Sorry", "error");
+      Swal.fire("Error", data.message || "Registration failed", "error");
     }
   };
 
