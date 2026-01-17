@@ -61,15 +61,15 @@ const ProductDetails = async ({ params }) => {
   return (
     <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
       {/* Image */}
-      {/* <div className="rounded-xl overflow-hidden ">
+      <div className="rounded-xl overflow-hidden ">
         <Image
           width={600}
           height={420}
           src={image}
           alt={title}
-          className="w-full h-[420px] object-cover"
+          className="w-full h-100 object-contain"
         />
-      </div> */}
+      </div>
 
       {/* Info */}
       <div>

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
         "Fun and educational learning toy for kids. Safe, colorful, and engaging.",
       images: [
         {
-          url: product.image || "https://i.ibb.co.com/Ld7J2ZYq/image.png",
+          url: product.image || "https://i.ibb.co/Ld7J2ZYq/image.png",
           width: 1200,
           height: 630,
           alt: product.title,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: product.title,
       description: "Fun and educational learning toy for kids.",
-      images: [product.image || "https://i.ibb.co.com/Ld7J2ZYq/image.png"],
+      images: [product.image || "https://i.ibb.co/Ld7J2ZYq/image.png"],
     },
   };
 }
@@ -56,21 +56,22 @@ const ProductDetails = async ({ params }) => {
     info,
     qna,
   } = product;
+  console.log(image);
 
   const discountedPrice = price - (price * discount) / 100;
 
   return (
     <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
       {/* Image */}
-      {/* <div className="rounded-xl overflow-hidden ">
+      <div className="rounded-xl ">
         <Image
           width={600}
           height={420}
           src={image}
           alt={title}
-          className="w-full h-105 object-cover"
+          className="w-full object-cover"
         />
-      </div> */}
+      </div>
 
       {/* Info */}
       <div>

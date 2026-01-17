@@ -8,14 +8,14 @@ const ProductCard = ({ product }) => {
   const { title, image, price, ratings, reviews, sold, _id } = product;
 
   return (
-    <div className="card w-72 bg-base-100 shadow-lg p-2">
+    <div className="card w-72 bg-base-100 shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300 mx-auto border border-gray-200 rounded-lg">
       <figure className="p-4">
         <Image
           width={200}
-          height={180}
+          height={200}
           src={image}
           alt={title}
-          className="rounded-md w-full h-48 object-cover"
+          className="rounded-md w-full h-52 object-contain"
         />
       </figure>
 
@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="flex justify-between items-center mt-2">
-          <span className="font-bold text-lg">৳{price}</span>
+          <span className="font-bold text-lg">${price}</span>
           <span className="text-sm text-gray-500">{sold} sold</span>
         </div>
 
