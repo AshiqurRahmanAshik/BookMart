@@ -1,47 +1,58 @@
 "use server";
+
 import { collections, dbConnect } from "@/lib/dbConnect";
 import bcrypt from "bcryptjs";
 
 export const postUser = async (payload) => {
   const { email, password, name } = payload;
+
   if (!email || !password) {
-    return {
-      success: false,
-    };
+    return { success: false };
   }
-  const isExist = await dbConnect(collections.USERS).findOne({ email });
+
+  // ✅ FIX
+  const usersCollection = await dbConnect(collections.USERS);
+
+  const isExist = await usersCollection.findOne({ email });
   if (isExist) {
-    return {
-      success: false,
-    };
+    return { success: false };
   }
+
   const newUser = {
     provider: "credentials",
     name,
     email,
     password: await bcrypt.hash(password, 14),
     role: "user",
+    createdAt: new Date(),
   };
 
-  const result = await dbConnect(collections.USERS).insertOne(newUser);
+  const result = await usersCollection.insertOne(newUser);
+
   return {
-    ...result,
-    insertedId: result.insertedId?.toString(),
+    success: true,
+    insertedId: result.insertedId.toString(),
   };
 };
 
 export const loginUser = async (payload) => {
-  const { email, password, name } = payload;
+  const { email, password } = payload;
+
   if (!email || !password) {
     return null;
   }
-  const user = await dbConnect(collections.USERS).findOne({ email });
-  if (!user) {
-    return null;
-  }
-  const isMatched = await bcrypt.compare(password, user?.password);
-  if (isMatched) {
-    return user;
-  }
-  return null;
+
+  // ✅ FIX
+  const usersCollection = await dbConnect(collections.USERS);
+
+  const user = await usersCollection.findOne({ email });
+  if (!user) return null;
+
+  const isMatched = await bcrypt.compare(password, user.password);
+
+  if (!isMatched) return null;
+
+  // ✅ Never return password to client
+  const { password: _, ...safeUser } = user;
+  return safeUser;
 };

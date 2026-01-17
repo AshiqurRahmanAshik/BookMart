@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Link from "next/link";
 import NavLink from "../buttons/NavLink";
 import { IoCartOutline } from "react-icons/io5";
+import AuthButtons from "../buttons/AuthButtons";
 
 const Navbar = () => {
   const nav = (
@@ -59,12 +60,7 @@ const Navbar = () => {
           {" "}
           <IoCartOutline size={30} color="green" />
         </Link>
-        <Link href="/login" className="btn btn-primary">
-          Login
-        </Link>
-        <Link href="/signup" className="btn btn-outline btn-primary ml-2">
-          Sign Up
-        </Link>
+        <AuthButtons />
       </div>
     </div>
   );
