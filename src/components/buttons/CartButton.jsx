@@ -37,7 +37,7 @@ const CartButton = ({ product }) => {
       if (result.success) {
         Swal.fire({
           icon: "success",
-          title: "Added to Cart",
+          title: result.alreadyAdded ? "Already in Cart" : "Added to Cart",
           text: product?.title,
           timer: 1500,
           showConfirmButton: false,

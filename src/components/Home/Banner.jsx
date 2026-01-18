@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
@@ -15,12 +16,12 @@ const Banner = () => {
               educate, and entertain.
             </p>
             <div className="flex justify-center lg:justify-start gap-4">
-              <a href="#shop" className="btn btn-primary btn-lg">
+              <Link href="/products" className="btn btn-primary btn-lg">
                 Shop Now
-              </a>
-              <a href="#about" className="btn btn-accent btn-lg">
+              </Link>
+              <Link href="/blog" className="btn btn-accent btn-lg">
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
 

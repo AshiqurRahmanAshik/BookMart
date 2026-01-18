@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import Products from "@/components/home/Products";
-import Image from "next/image";
+import BuyFromUs from "@/components/Others/BuyFromUs";
+
 
 export default function Home() {
   return (
@@ -11,6 +12,9 @@ export default function Home() {
 
       <section>
         <Products></Products>
+      </section>
+      <section>
+        <BuyFromUs></BuyFromUs>
       </section>
     </div>
   );
