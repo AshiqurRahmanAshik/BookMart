@@ -56,10 +56,10 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{nav}</ul>
       </div>
       <div className="navbar-end space-x-2">
-        <Link href="/cart" className="btn btn-ghost btn-circle">
+        {/* <Link href="/cart" className="btn btn-ghost btn-circle">
           {" "}
           <IoCartOutline size={30} color="green" />
-        </Link>
+        </Link> */}
         <AuthButtons />
       </div>
     </div>
