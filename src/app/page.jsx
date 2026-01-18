@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import Products from "@/components/home/Products";
 import BuyFromUs from "@/components/Others/BuyFromUs";
+import FAQ from "@/components/Others/FAQ";
 import Stats from "@/components/Others/Stats";
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
 
       <section>
         <Stats></Stats>
+      </section>
+      <section>
+        <FAQ></FAQ>
       </section>
     </div>
   );
