@@ -1,7 +1,7 @@
 import Banner from "@/components/home/Banner";
 import Products from "@/components/home/Products";
 import BuyFromUs from "@/components/Others/BuyFromUs";
-
+import Stats from "@/components/Others/Stats";
 
 export default function Home() {
   return (
@@ -15,6 +15,10 @@ export default function Home() {
       </section>
       <section>
         <BuyFromUs></BuyFromUs>
+      </section>
+
+      <section>
+        <Stats></Stats>
       </section>
     </div>
   );
