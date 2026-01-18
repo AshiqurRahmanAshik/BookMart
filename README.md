@@ -1,57 +1,27 @@
-# Hero Kidzz - Project Assets
-<img src="assets/hero.png">
-## Overview
+# 📚 Book Shop Website
 
-Hero Kidzz is a small, single-vendor e-commerce web application designed for selling children's products. This repository contains all project assets including images, icons, and media files.
+A modern, responsive **Book Shop Website** built using **Next.js 16 (App Router)** and **Express.js**.  
+The website showcases books, provides smooth browsing, and includes  NextAuth.js authentication for managing books.
 
-## Features
+---
 
-- 🛍️ **Product Catalog** - Browse children's toys and accessories
-- 🛒 **Shopping Cart** - Add and manage items
-- 💳 **Easy Checkout** - Safe payment processing
-- 📦 **Order Invoice** - Monitor shipments
-- 👤 **User Accounts** - Save preferences and history
-- 🎨 **Responsive Design** - Mobile-friendly interface
-- ⭐ **Product Reviews** - Customer feedback system
+## 🔍 Project Overview
 
-## Starter packages
-```
-npm install react-icons mongodb bcryptjs
-```
+This application includes:
+- A public landing page with multiple sections
+-  NextAuth.js for login 
+- Public book listing and book details pages
+- Express.js API for managing book data
 
-## Colors
+The project demonstrates **routing, authentication, API integration, and UI structuring** in Next.js App Router.
 
-```
- /* Brand */
-  --color-primary: oklch(65% 0.23 35);
-  --color-secondary: oklch(58% 0.18 30);
-  --color-accent: oklch(72% 0.20 55);
+---
 
-  /* Base */
-  --color-base-100: oklch(100% 0 0);
-  --color-base-200: oklch(97% 0.01 95);
-  --color-base-300: oklch(92% 0.015 95);
+## 🚀 Live Demo
 
-  /* Neutral */
-  --color-neutral: oklch(35% 0.01 260);
-  --color-neutral-content: oklch(96% 0 0);
+- **Live Site:** https://book-mart-online.vercel.app/  
 
-  /* Feedback */
-  --color-success: oklch(70% 0.17 145);
-  --color-error: oklch(62% 0.24 28);
-```
 
-## Getting Started
+---
 
-1. Clone the repository
-2. Extract assets to your project directory
-3. Reference images in your application
 
-## Contributing
-
-Follow project guidelines when adding new assets.
-
-## License
-
-All assets are proprietary to Hero Kidzz.
-# Hero-Kidz-assets
